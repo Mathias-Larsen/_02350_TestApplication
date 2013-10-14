@@ -9,8 +9,17 @@
                 <MenuItem Header="_Save" Command="ApplicationCommands.Save"/>
                 <MenuItem Header="_Close" Command="ApplicationCommands.Close"/>
             </MenuItem>
-            <MenuItem Header="_Edit"></MenuItem>
-            <MenuItem Header="_Insert"></MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="_Undo"/>
+                <MenuItem Header="_Redo"/>
+                <MenuItem Header="_Cut" Command="ApplicationCommands.Cut"/>
+                <MenuItem Header="_Copy" Command="ApplicationCommands.Copy"/>
+                <MenuItem Header="_Paste" Command="ApplicationCommands.Paste"/>
+            </MenuItem>
+            <MenuItem Header="_Insert">
+                <MenuItem Header="_Class"/>
+                <MenuItem Header="_Edge"/>
+            </MenuItem>
         </Menu>
         
     </DockPanel>
