@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace _02350_TestApplication.Model
 {
-    class Edge
+    public class Edge
     {
+
     }
 }

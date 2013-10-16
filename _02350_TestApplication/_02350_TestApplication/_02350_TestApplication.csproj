@@ -33,6 +33,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>View\Pictures\1381860762_172507.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>_02350_TestApplication.View.App</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="GalaSoft.MvvmLight.Extras.WPF45">
       <HintPath>..\packages\MvvmLightLibs.4.1.27.1\lib\net45\GalaSoft.MvvmLight.Extras.WPF45.dll</HintPath>
@@ -133,6 +142,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Pictures\_arrow_undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Pictures\_arrow_redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Pictures\1381838414_22457.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1381838414_22457.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Pictures\1381860762_172507.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Pictures\_bullet_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\Pictures\_bullet_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\_02350_TestApplication.Model\_02350_TestApplication.Model.csproj">
+      <Project>{365487f4-9be0-4bcf-b9de-716f8d6c1a90}</Project>
+      <Name>_02350_TestApplication.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
