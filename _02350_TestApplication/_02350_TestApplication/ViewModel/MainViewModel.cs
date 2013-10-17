@@ -43,8 +43,8 @@ namespace _02350_TestApplication.ViewModel
 
             ClassBoxes = new ObservableCollection<ClassBox>()
             {
-                new ClassBox() { X=30, Y=40, Width=80, Height=80 }, // jeg fatter overhoved ikke det her med komma og semikolon til sidst??  @mathias
-                new ClassBox() { X=140, Y=230, Width=80, Height=80}
+                new ClassBox() { X=100, Y=100, Width=80, Height=80 }, // jeg fatter overhoved ikke det her med komma og semikolon til sidst??  @mathias
+                new ClassBox() { X=140, Y=300, Width=80, Height=80}
             };
 
 
