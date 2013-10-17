@@ -59,12 +59,13 @@
             </StackPanel>
         </Border>
         <Grid DockPanel.Dock="Left">
+            <View:ClassBoxSidepanelUserControl Width="80"/>
             <ItemsControl ItemsSource="{Binding Edges}"/>
             <ItemsControl ItemsSource="{Binding ClassBoxes}"/>
         </Grid>
         
         <TextBox DockPanel.Dock="Bottom" Height="100">
-            Console
+            Console for diagnostics
         </TextBox>
         
     </DockPanel>

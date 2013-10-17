@@ -1,4 +1,16 @@
+using _02350_TestApplication.Command;
+using _02350_TestApplication.Model;
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Shapes;
 
 namespace _02350_TestApplication.ViewModel
 {

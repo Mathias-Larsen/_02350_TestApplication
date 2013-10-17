@@ -82,6 +82,9 @@
     <Compile Include="Command\RemoveEdgesCommand.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\ClassBoxSidepanelUserControl.xaml.cs">
+      <DependentUpon>ClassBoxSidepanelUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ClassBoxUserControl.xaml.cs">
       <DependentUpon>ClassBoxUserControl.xaml</DependentUpon>
     </Compile>
@@ -98,6 +101,10 @@
     <Compile Include="View\SidePanelUserControl.xaml.cs">
       <DependentUpon>SidePanelUserControl.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\ClassBoxSidepanelUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ClassBoxUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
