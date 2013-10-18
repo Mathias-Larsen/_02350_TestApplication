@@ -4,8 +4,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
-    </Grid>
+             d:DesignHeight="100" d:DesignWidth="100">
+    <Line Stroke="Red" X1="{Binding EndA.X}" Y1="{Binding EndA.Y}" X2="{Binding EndB.X}" Y2="{Binding EndB.Y}" StrokeThickness="2"/>
 </UserControl>

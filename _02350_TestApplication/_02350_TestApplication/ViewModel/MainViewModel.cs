@@ -37,8 +37,33 @@ namespace _02350_TestApplication.ViewModel
         public ObservableCollection<Edge> Edges { get; set; }
         public ObservableCollection<ClassBox> SelectedClassBox { get; set; }
 
+        // start with undo/redo definitions
+        private static RoutedUICommand applicationUndo;
+
+        public static RoutedUICommand ApplicationUndo
+        {
+            get { return _02350_TestApplication.ViewModel.MainViewModel.applicationUndo; }
+        }
+
+        // maybe up for a change
+        public void AddClassBoxCommand(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("New Command triggered with " + e.Source.ToString());
+        }
+
+        public void NewCommand(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("New Command triggered with " + e.Source.ToString());
+        }
+
         public MainViewModel()
         {
+            //create bindings
+            //binding = new CommandBinding(_02350_TestApplication.Command.AddClassBoxCommand);
+            CommandBinding binding = new CommandBinding(ApplicationCommands.New);
+            binding.Executed += NewCommand;
+            //this.CommandBindings.Add(binding);
+
             //SelectedClassBox = new ObservableCollection<ClassBox>();
 
             ClassBoxes = new ObservableCollection<ClassBox>()

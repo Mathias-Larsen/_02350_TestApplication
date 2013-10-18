@@ -1,4 +1,5 @@
 ﻿using System;
+using _02350_TestApplication.ViewModel;
 using _02350_TestApplication.View;
 using System.Collections.Generic;
 using System.Configuration;

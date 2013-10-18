@@ -6,6 +6,6 @@
              d1p1:Ignorable="d" 
              xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006">
   <Application.Resources>
-    <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" xmlns:vm="clr-namespace:_02350_TestApplication.ViewModel" />
+        <vm:ViewModelLocator xmlns:vm="clr-namespace:_02350_TestApplication.ViewModel" x:Key="Locator" d:IsDataSource="True"/>
   </Application.Resources>
 </Application>

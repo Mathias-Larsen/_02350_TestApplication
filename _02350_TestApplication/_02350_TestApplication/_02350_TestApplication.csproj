@@ -77,9 +77,11 @@
     <Compile Include="Command\AddClassBoxCommand.cs" />
     <Compile Include="Command\AddEdgeCommand.cs" />
     <Compile Include="Command\IUndoRedoCommand.cs" />
+    <Compile Include="Command\LoadCommand.cs" />
     <Compile Include="Command\MoveClassBoxCommand.cs" />
     <Compile Include="Command\RemoveClassBoxCommand.cs" />
     <Compile Include="Command\RemoveEdgesCommand.cs" />
+    <Compile Include="Command\SaveCommand.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\ClassBoxSidepanelUserControl.xaml.cs">

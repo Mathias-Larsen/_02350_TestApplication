@@ -6,10 +6,11 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace _02350_TestApplication.Command
 {
-    class AddClassBoxCommand : IUndoRedoCommand
+    public class AddClassBoxCommand : IUndoRedoCommand
     {
         private ObservableCollection<ClassBox> classBoxes;
         private ClassBox classBox;
@@ -25,5 +26,9 @@ namespace _02350_TestApplication.Command
         {
             classBoxes.Remove(classBox);
         }
+
+        //bool CanExecute(Object parameter);
+
+        //event EventHandler CanExecuteChanged;
     }
 }

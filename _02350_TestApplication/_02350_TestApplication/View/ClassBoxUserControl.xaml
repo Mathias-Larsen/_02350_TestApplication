@@ -9,8 +9,8 @@
              Canvas.Left="{Binding X}" Canvas.Top="{Binding Y}" Width="{Binding Width}" Height="{Binding Height}" 
              d:DesignHeight="100" d:DesignWidth="100">
     <StackPanel>
-        <TextBox Name="ClassName"></TextBox>
-        <TextBox Name="Attributes"></TextBox>
-        <TextBox Name="Methods"></TextBox>
+        <TextBox Name="ClassName" FontWeight="Bold" TextAlignment="Center">Class Name</TextBox>
+        <TextBox Name="Attributes">Attributes</TextBox>
+        <TextBox Name="Methods">Methods</TextBox>
     </StackPanel>
 </UserControl>
