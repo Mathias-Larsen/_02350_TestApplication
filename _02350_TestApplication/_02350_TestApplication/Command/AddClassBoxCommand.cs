@@ -10,14 +10,14 @@ using System.Windows.Input;
 
 namespace _02350_TestApplication.Command
 {
-    public class AddClassBoxCommand : IUndoRedoCommand
+    public class AddClassBoxCommand : ICommand
     {
         private ObservableCollection<ClassBox> classBoxes;
         private ClassBox classBox;
 
         public AddClassBoxCommand(ObservableCollection<ClassBox> _classBox) { classBoxes = _classBox; }
 
-        public void Execute()
+        public void Execute(object parameter)
         {
             classBoxes.Add(classBox = new ClassBox());
         }
@@ -27,8 +27,11 @@ namespace _02350_TestApplication.Command
             classBoxes.Remove(classBox);
         }
 
-        //bool CanExecute(Object parameter);
+        public bool CanExecute(object parameter)
+        {
+            return false;
+        }
 
-        //event EventHandler CanExecuteChanged;
+        public event EventHandler CanExecuteChanged;
     }
 }
