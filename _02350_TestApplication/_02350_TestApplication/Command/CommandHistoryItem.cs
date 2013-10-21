@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _02350_TestApplication.Command
 {
-    class CommandsManager
+    class CommandHistoryItem
     {
     }
 }
