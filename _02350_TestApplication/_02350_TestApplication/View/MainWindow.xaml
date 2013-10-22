@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Model="clr-namespace:_02350_TestApplication.Model;assembly=_02350_TestApplication.Model"
         xmlns:View="clr-namespace:_02350_TestApplication.View"
+        xmlns:ViewModel="clr-namespace:_02350_TestApplication.ViewModel"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
         xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.WPF45"
         DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
@@ -22,6 +23,10 @@
             </Canvas>
         </DataTemplate>
     </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.New"
+                        Executed="NewCommand_Executed"/>
+    </Window.CommandBindings>
 
     <DockPanel>
         <Menu DockPanel.Dock="Top">
@@ -51,7 +56,7 @@
                 <Button>
                     <Image Source="Pictures/_arrow_redo.png"></Image>
                 </Button>
-                <Button Command="{Binding AddClassBoxCommand}">
+                <Button Command="{Binding Local.AddClassCommand}">
                     <Image Source="Pictures/_bullet_add.png"/>
                 </Button>
                 <Button Command="{Binding RemoveClassCommand}">

@@ -24,5 +24,20 @@ namespace _02350_TestApplication.View
         {
             InitializeComponent();
         }
+
+        private void AddClassCommand()
+        {
+            MessageBox.Show("ClassBox");
+        }
+
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
+
+        private void NewCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("NewCommand");
+        }
     }
 }

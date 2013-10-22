@@ -11,6 +11,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
+using System;
 
 namespace _02350_TestApplication.ViewModel
 {
@@ -37,6 +38,8 @@ namespace _02350_TestApplication.ViewModel
         public ObservableCollection<Edge> Edges { get; set; }
         public ObservableCollection<ClassBox> SelectedClassBox { get; set; }
 
+        public ICommand AddClassBoxCommand { get; private set; }
+
         // start with undo/redo definitions
         private static RoutedUICommand applicationUndo;
 
@@ -46,14 +49,20 @@ namespace _02350_TestApplication.ViewModel
         }
 
         // maybe up for a change
-        public void AddClassBoxCommand(object sender, ExecutedRoutedEventArgs e)
-        {
-            MessageBox.Show("New Command triggered with " + e.Source.ToString());
-        }
+        //public void AddClassBoxCommand(object sender, ExecutedRoutedEventArgs e)
+        //{
+            //MessageBox.Show("New Command triggered with " + e.Source.ToString());
+          // ClassBoxes.Add(new ClassBox() { X = 150, Y = 200, Width = 80, Height = 80 });
+        //}
 
         public void NewCommand(object sender, ExecutedRoutedEventArgs e)
         {
             MessageBox.Show("New Command triggered with " + e.Source.ToString());
+        }
+
+        private void CommandExecuted(object sernder, ExecutedRoutedEventArgs e)
+        {
+
         }
 
         public MainViewModel()
@@ -65,23 +74,28 @@ namespace _02350_TestApplication.ViewModel
             //this.CommandBindings.Add(binding);
 
             //SelectedClassBox = new ObservableCollection<ClassBox>();
-
+            // add classboxes to canvas
             ClassBoxes = new ObservableCollection<ClassBox>()
             {
                 new ClassBox() { X=100, Y=100, Width=80, Height=80 }, // jeg fatter overhoved ikke det her med komma og semikolon til sidst??  @mathias
                 new ClassBox() { X=140, Y=300, Width=80, Height=80}
             };
 
+            
+
+            AddClassBoxCommand = new RoutedCommand();
+            
 
 
-            ////if (IsInDesignMode)
-            ////{
-            ////    // Code runs in Blend --> create design time data.
-            ////}
-            ////else
-            ////{
-            ////    // Code runs "for real"
-            ////}
+        }
+        public void AddClassBox()
+        {
+            
+        }
+
+        public void NewCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("Hello");
         }
     }
 }
